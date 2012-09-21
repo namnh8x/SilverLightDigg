@@ -1,0 +1,33 @@
+﻿<UserControl x:Class="SilverlightApplication1.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <!--dinh nghia co: d:DesignHeight="768" d:DesignWidth="1024"-->
+
+    <Grid x:Name="LayoutRoot" Background="#FF5C7590" ShowGridLines="True"> <!--dinh nghia mau + show GridLines-->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition> <!--Co con lai bao nhieu lay het-->
+        </Grid.RowDefinitions>
+        
+        <Grid Grid.Row="0" Margin="7" ShowGridLines="True"> <!--Nhet them 1 cai Grid vao trong cai Grid dau tien. Chu y Grid.Row="0"-->
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="200"></ColumnDefinition>
+                <ColumnDefinition Width="50"></ColumnDefinition>
+                                              
+            </Grid.ColumnDefinitions>
+            <Border Grid.Column="0" CornerRadius="10" Background="#FFDEDEDE" Margin="0,0,5,0"> <!--Set cho search (Grid) cong o 4 goc-->
+                <TextBlock Text="Digg Search" Foreground="#FF14517B" Margin="10,3,0,0"></TextBlock> <!--Set default TextBox vao day-->
+            </Border>
+            <Border Grid.Column="1" Background="#FFDEDEDE" CornerRadius="10">
+                <TextBlock Grid.Column="1" FontSize="13" Foreground="#FF14517B" Text="Topic ..."></TextBlock>
+                <!--Set nut Topic-->
+            </Border>
+            
+            <Button Grid.Column="2" Content="Search"></Button>
+        </Grid>
+    </Grid>
+</UserControl>
